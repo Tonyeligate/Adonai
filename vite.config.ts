@@ -8,6 +8,12 @@ import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
 export default defineConfig({
+  // Enable the nitro deploy plugin and pin its target to Vercel.
+  // The Lovable config skips nitro entirely outside its own sandbox unless
+  // `nitro` is set explicitly — without this, Vercel builds produce no SSR
+  // function and every route 404s. (Inside Lovable's sandbox this is ignored;
+  // it forces cloudflare-module regardless.)
+  nitro: { preset: "vercel" },
   resolve: {
     alias: [
       {
