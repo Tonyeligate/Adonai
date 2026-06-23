@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Library at Adonai">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F4C81"/>
+      <stop offset="1" stop-color="#0A2F56"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.8" cy="0.15" r="0.7">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.5" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <rect width="1200" height="800" fill="url(#dots)"/>
+  <rect width="1200" height="800" fill="url(#glow)"/>
+  <g fill="none" stroke="#D4AF37" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M470,300 Q540,278 600,300 Q660,278 730,300 L730,420 Q660,398 600,420 Q540,398 470,420 Z" fill="#0A2F56"/>
+    <path d="M600,300 L600,420"/>
+    <rect x="500" y="445" width="220" height="34" rx="6" fill="#0A2F56"/>
+    <rect x="470" y="484" width="180" height="30" rx="6" fill="#0A2F56"/>
+    <rect x="540" y="518" width="160" height="28" rx="6" fill="#0A2F56"/>
+  </g>
+  <text x="600" y="640" text-anchor="middle" font-family="'Poppins',ui-sans-serif,system-ui,sans-serif" font-size="34" font-weight="700" letter-spacing="3" fill="#D4AF37">LIBRARY</text>
+  <text x="600" y="682" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="20" letter-spacing="2" fill="#ffffff" opacity="0.6">READING &amp; RESEARCH</text>
+</svg>

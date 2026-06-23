@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-label="Adonai International School students">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F4C81"/>
+      <stop offset="1" stop-color="#082A4E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.78" cy="0.2" r="0.75">
+      <stop offset="0" stop-color="#D4AF37" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <rect width="1920" height="1080" fill="url(#dots)"/>
+  <rect width="1920" height="1080" fill="url(#glow)"/>
+  <g fill="none" stroke="#D4AF37" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+    <!-- three graduation caps -->
+    <g>
+      <polygon points="780,540 940,625 780,710 620,625" fill="#D4AF37" fill-opacity="0.10"/>
+      <path d="M695,650 Q780,688 865,650 L845,718 Q780,745 715,718 Z" fill="#082A4E"/>
+      <path d="M940,625 L940,715"/>
+      <circle cx="940" cy="730" r="13" fill="#D4AF37"/>
+    </g>
+    <g opacity="0.55" transform="translate(-300,40) scale(0.8)">
+      <polygon points="780,540 940,625 780,710 620,625" fill="#D4AF37" fill-opacity="0.08"/>
+    </g>
+    <g opacity="0.55" transform="translate(340,40) scale(0.8)">
+      <polygon points="780,540 940,625 780,710 620,625" fill="#D4AF37" fill-opacity="0.08"/>
+    </g>
+    <!-- sparkles -->
+    <path d="M1500,360 l8,20 20,8 -20,8 -8,20 -8,-20 -20,-8 20,-8 z" fill="#D4AF37" opacity="0.7"/>
+    <path d="M380,720 l6,16 16,6 -16,6 -6,16 -6,-16 -16,-6 16,-6 z" fill="#ffffff" opacity="0.5"/>
+  </g>
+  <text x="960" y="930" text-anchor="middle" font-family="'Poppins','Montserrat',ui-sans-serif,system-ui,sans-serif" font-size="46" font-weight="700" letter-spacing="6" fill="#D4AF37">ADONAI INTERNATIONAL SCHOOL</text>
+  <text x="960" y="982" text-anchor="middle" font-family="ui-sans-serif,system-ui,sans-serif" font-size="24" letter-spacing="8" fill="#ffffff" opacity="0.6">DISCIPLINE · HARD WORK</text>
+</svg>
