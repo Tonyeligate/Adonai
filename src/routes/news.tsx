@@ -3,10 +3,10 @@ import { useEffect, useMemo, useState } from "react";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
 import { Calendar, Tag, ArrowRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import graduation from "@/assets/graduation.svg";
-import sports from "@/assets/sports.svg";
-import science from "@/assets/science.svg";
-import cultural from "@/assets/cultural.svg";
+import graduation from "@/assets/graduation.jpg";
+import sports from "@/assets/sports.jpg";
+import jhs from "@/assets/jhs.jpg";
+import cultural from "@/assets/cultural.jpg";
 import ict from "@/assets/ict-lab.svg";
 
 export const Route = createFileRoute("/news")({
@@ -27,7 +27,7 @@ type Post = { id: string; title: string; excerpt: string | null; image_url: stri
 
 const fallback: Post[] = [
   { id: "f1", title: "Class of 2025 celebrates JHS graduation", excerpt: "Our JHS 3 leavers were celebrated in a beautiful ceremony attended by parents, staff and dignitaries.", image_url: graduation, category: "School News", published_at: "2025-07-12", created_at: "2025-07-12" },
-  { id: "f2", title: "Adonai pupils sweep inter-school science fair", excerpt: "Three first-place awards across robotics, biology and physics categories.", image_url: science, category: "Academic Achievements", published_at: "2025-05-22", created_at: "2025-05-22" },
+  { id: "f2", title: "Adonai pupils sweep inter-school science fair", excerpt: "Three first-place awards across robotics, biology and physics categories.", image_url: jhs, category: "Academic Achievements", published_at: "2025-05-22", created_at: "2025-05-22" },
   { id: "f3", title: "Annual sports day brings the community together", excerpt: "A joyful day of athletics, football and tug-of-war across four houses.", image_url: sports, category: "Sports Activities", published_at: "2025-03-08", created_at: "2025-03-08" },
   { id: "f4", title: "Cultural day showcases Ghana's heritage", excerpt: "Pupils dazzled in kente and traditional dress with dance, drumming and storytelling.", image_url: cultural, category: "School News", published_at: "2025-02-15", created_at: "2025-02-15" },
   { id: "f5", title: "New ICT lab officially opens", excerpt: "A modern, fully equipped lab now serves Primary 4 through JHS 3.", image_url: ict, category: "School News", published_at: "2024-11-04", created_at: "2024-11-04" },

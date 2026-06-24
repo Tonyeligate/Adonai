@@ -76,7 +76,7 @@ const ORG_JSONLD = {
   name: "Adonai International School",
   alternateName: "Adonai International",
   url: "/",
-  logo: "/favicon.ico",
+  logo: "/favicon.jpeg",
   description:
     "Adonai International School is a premier private international school in Adjei Kojo, Tema West, Ghana offering Creche, Nursery, Kindergarten, Primary and Junior High School education.",
   slogan: "Discipline and Hard Work",
@@ -108,6 +108,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "robots", content: "index, follow" },
     ],
     links: [
+      { rel: "icon", type: "image/jpeg", href: "/favicon.jpeg" },
+      { rel: "apple-touch-icon", href: "/favicon.jpeg" },
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },

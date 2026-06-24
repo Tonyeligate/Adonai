@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Phone } from "lucide-react";
+import logo from "@/assets/adonai-logo.jpeg";
 
 const links = [
   { to: "/", label: "Home" },
@@ -31,9 +32,7 @@ export function Navbar() {
     >
       <div className="container-x flex h-20 items-center justify-between gap-4">
         <Link to="/" className="flex min-w-0 items-center gap-3" aria-label="Adonai International School — Home">
-          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-primary/20 bg-primary/10 font-display text-lg font-bold text-primary">
-            A
-          </div>
+          <img src={logo} alt="Adonai International School logo" className="h-12 w-12 shrink-0 rounded-md object-cover" width={48} height={48} />
           <div className="min-w-0 leading-tight">
             <div className="truncate font-display text-base font-bold text-primary sm:text-lg">Adonai International School</div>
             <div className="truncate text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Discipline · Hard Work</div>

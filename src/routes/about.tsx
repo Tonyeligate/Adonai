@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
-import campus from "@/assets/campus.svg";
+import campus from "@/assets/campus.jpg";
 import { Award, Compass, Heart, Lightbulb, Scale, Crown } from "lucide-react";
 
 export const Route = createFileRoute("/about")({

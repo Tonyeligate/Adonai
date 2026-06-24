@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, Mail, Facebook, Instagram, Youtube } from "lucide-react";
+import logo from "@/assets/adonai-logo.jpeg";
 
 export function Footer() {
   return (
@@ -7,9 +8,7 @@ export function Footer() {
       <div className="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-md border border-white/15 bg-white/10 font-display text-lg font-bold text-gold">
-              A
-            </div>
+            <img src={logo} alt="Adonai International School logo" className="h-12 w-12 shrink-0 rounded-md object-cover" width={48} height={48} />
             <div>
               <div className="font-display text-lg font-bold">Adonai International</div>
               <div className="text-xs uppercase tracking-[0.18em] text-white/60">Discipline · Hard Work</div>

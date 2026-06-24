@@ -1,9 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
 import { BookOpen, Cpu, FlaskConical, Calculator, Languages, Trophy } from "lucide-react";
-import kindergarten from "@/assets/kindergarten.svg";
+import creche from "@/assets/creche.jpg";
+import kindergarten from "@/assets/kindergarten.jpg";
 import ict from "@/assets/ict-lab.svg";
-import science from "@/assets/science.svg";
+import jhs from "@/assets/jhs.jpg";
 
 export const Route = createFileRoute("/academics")({
   head: () => ({
@@ -29,10 +30,10 @@ const overview = [
 ];
 
 const departments = [
-  { t: "Creche & Nursery", o: "Safe, loving care with playful early-learning experiences.", a: "Play-based, sensory and social learning.", s: ["Language play", "Numbers & shapes", "Music & movement", "Creative arts"], img: kindergarten },
+  { t: "Creche & Nursery", o: "Safe, loving care with playful early-learning experiences.", a: "Play-based, sensory and social learning.", s: ["Language play", "Numbers & shapes", "Music & movement", "Creative arts"], img: creche },
   { t: "Kindergarten", o: "Phonics, early numeracy, social skills and moral foundations.", a: "Theme-based learning with hands-on activities.", s: ["English language", "Numeracy", "Our World Our People", "Creative arts"], img: kindergarten },
   { t: "Primary School", o: "Strong literacy, numeracy and ICT foundations.", a: "Inquiry-led classrooms with regular assessment.", s: ["English", "Mathematics", "Science", "ICT", "Religious & Moral Ed.", "Ghanaian Language", "French"], img: ict },
-  { t: "Junior High School", o: "BECE preparation, STEM focus and leadership development.", a: "Subject specialists with structured revision and mentorship.", s: ["English", "Mathematics", "Integrated Science", "Social Studies", "ICT", "Career Tech", "RME", "French", "Ghanaian Language"], img: science },
+  { t: "Junior High School", o: "BECE preparation, STEM focus and leadership development.", a: "Subject specialists with structured revision and mentorship.", s: ["English", "Mathematics", "Integrated Science", "Social Studies", "ICT", "Career Tech", "RME", "French", "Ghanaian Language"], img: jhs },
 ];
 
 function Academics() {

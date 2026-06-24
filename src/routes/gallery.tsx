@@ -3,15 +3,21 @@ import { useEffect, useMemo, useState } from "react";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
 import { X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import graduation from "@/assets/graduation.svg";
-import sports from "@/assets/sports.svg";
-import excursion from "@/assets/excursion.svg";
-import science from "@/assets/science.svg";
-import cultural from "@/assets/cultural.svg";
-import kindergarten from "@/assets/kindergarten.svg";
-import library from "@/assets/library.svg";
+import graduation from "@/assets/graduation.jpg";
+import sports from "@/assets/sports.jpg";
+import excursion from "@/assets/excursion.jpg";
+import excursion2 from "@/assets/excursion-2.jpg";
+import excursion3 from "@/assets/excursion-3.jpg";
+import jhs from "@/assets/jhs.jpg";
+import cultural from "@/assets/cultural.jpg";
+import kindergarten from "@/assets/kindergarten.jpg";
+import library from "@/assets/library.jpg";
 import ict from "@/assets/ict-lab.svg";
-import campus from "@/assets/campus.svg";
+import campus from "@/assets/campus.jpg";
+import campus2 from "@/assets/campus-2.jpg";
+import campus3 from "@/assets/campus-3.jpg";
+import creche from "@/assets/creche.jpg";
+import primary from "@/assets/primary.jpg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -33,12 +39,18 @@ const fallback: Item[] = [
   { src: graduation, alt: "Graduation ceremony", cat: "Graduation" },
   { src: sports, alt: "Inter-house sports", cat: "Sports" },
   { src: excursion, alt: "School excursion", cat: "Excursions" },
-  { src: science, alt: "Science experiment", cat: "Science" },
+  { src: excursion2, alt: "School excursion", cat: "Excursions" },
+  { src: excursion3, alt: "School excursion", cat: "Excursions" },
+  { src: jhs, alt: "Junior High School class", cat: "Classroom" },
   { src: cultural, alt: "Cultural day performance", cat: "Cultural" },
   { src: kindergarten, alt: "Kindergarten storytime", cat: "Classroom" },
+  { src: creche, alt: "Creche classroom", cat: "Classroom" },
+  { src: primary, alt: "Primary school classroom", cat: "Classroom" },
   { src: library, alt: "Library reading hour", cat: "Facilities" },
-  { src: ict, alt: "ICT lab session", cat: "Classroom" },
   { src: campus, alt: "School campus", cat: "Facilities" },
+  { src: campus2, alt: "School campus", cat: "Facilities" },
+  { src: campus3, alt: "School campus", cat: "Facilities" },
+  { src: ict, alt: "ICT lab session", cat: "Classroom" },
 ];
 
 function Gallery() {

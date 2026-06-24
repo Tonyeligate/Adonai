@@ -13,16 +13,18 @@ import {
 } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Counter } from "@/components/site/Counter";
-import hero from "@/assets/hero-students.svg";
-import campus from "@/assets/campus.svg";
-import kindergarten from "@/assets/kindergarten.svg";
-import ict from "@/assets/ict-lab.svg";
-import science from "@/assets/science.svg";
-import graduation from "@/assets/graduation.svg";
-import sports from "@/assets/sports.svg";
-import cultural from "@/assets/cultural.svg";
-import library from "@/assets/library.svg";
-import excursion from "@/assets/excursion.svg";
+import hero from "@/assets/campus.jpg";
+import campus from "@/assets/campus.jpg";
+import creche from "@/assets/creche.jpg";
+import nursery from "@/assets/nursery.jpg";
+import kindergarten from "@/assets/kindergarten.jpg";
+import primary from "@/assets/primary.jpg";
+import jhs from "@/assets/jhs.jpg";
+import graduation from "@/assets/graduation.jpg";
+import sports from "@/assets/sports.jpg";
+import cultural from "@/assets/cultural.jpg";
+import library from "@/assets/library.jpg";
+import excursion from "@/assets/excursion.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -148,11 +150,11 @@ function Home() {
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
             {[
-              { t: "Creche", d: "Loving care for our youngest learners, from 6 months.", img: kindergarten },
-              { t: "Nursery", d: "Play-based foundations for curiosity and confidence.", img: kindergarten },
+              { t: "Creche", d: "Loving care for our youngest learners, from 6 months.", img: creche },
+              { t: "Nursery", d: "Play-based foundations for curiosity and confidence.", img: nursery },
               { t: "Kindergarten", d: "Early literacy, numeracy and social skills.", img: kindergarten },
-              { t: "Primary", d: "Strong academic foundation with ICT and character.", img: ict },
-              { t: "Junior High", d: "BECE excellence with STEM and leadership focus.", img: science },
+              { t: "Primary", d: "Strong academic foundation with ICT and character.", img: primary },
+              { t: "Junior High", d: "BECE excellence with STEM and leadership focus.", img: jhs },
             ].map((lvl) => (
               <article key={lvl.t} className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition hover:-translate-y-1 hover:shadow-[var(--shadow-elegant)]">
                 <div className="aspect-[4/3] overflow-hidden">
@@ -242,7 +244,7 @@ function Home() {
             {[
               { src: graduation, a: "Graduation ceremony", span: "md:col-span-2 md:row-span-2" },
               { src: sports, a: "Sports day" },
-              { src: science, a: "Science experiment" },
+              { src: jhs, a: "Junior High" },
               { src: cultural, a: "Cultural day" },
               { src: library, a: "Library" },
               { src: excursion, a: "Excursion" },
