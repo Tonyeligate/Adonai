@@ -3,11 +3,11 @@ import { useEffect, useMemo, useState } from "react";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
 import { Calendar, Tag, ArrowRight } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import graduation from "@/assets/graduation.jpg";
-import sports from "@/assets/sports.jpg";
-import jhs from "@/assets/jhs.jpg";
-import cultural from "@/assets/cultural.jpg";
-import ict from "@/assets/ict-lab.svg";
+import graduation from "@/assets/GRADUATION.jpeg";
+import sports from "@/assets/SPORTS.jpeg";
+import jhs from "@/assets/Jhs.jpeg";
+import cultural from "@/assets/Cultural.jpeg";
+import ict from "@/assets/academic-coordinator.jpg";
 
 export const Route = createFileRoute("/news")({
   head: () => ({

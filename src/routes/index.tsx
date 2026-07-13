@@ -13,18 +13,18 @@ import {
 } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Counter } from "@/components/site/Counter";
-import hero from "@/assets/campus.jpg";
-import campus from "@/assets/campus.jpg";
-import creche from "@/assets/creche.jpg";
-import nursery from "@/assets/nursery.jpg";
-import kindergarten from "@/assets/kindergarten.jpg";
-import primary from "@/assets/primary.jpg";
-import jhs from "@/assets/jhs.jpg";
-import graduation from "@/assets/graduation.jpg";
-import sports from "@/assets/sports.jpg";
-import cultural from "@/assets/cultural.jpg";
-import library from "@/assets/library.jpg";
-import excursion from "@/assets/excursion.jpg";
+import hero from "@/assets/Campus1.jpeg";
+import campus from "@/assets/campus3.jpeg";
+import creche from "@/assets/Creche.jpeg";
+import nursery from "@/assets/Nursery.jpeg";
+import kindergarten from "@/assets/KG.jpeg";
+import primary from "@/assets/Primary.jpeg";
+import jhs from "@/assets/Jhs.jpeg";
+import graduation from "@/assets/GRADUATION.jpeg";
+import sports from "@/assets/SPORTS.jpeg";
+import cultural from "@/assets/Cultural.jpeg";
+import library from "@/assets/LIBRARY.jpeg";
+import excursion from "@/assets/EXCURSION1.jpeg";
 
 export const Route = createFileRoute("/")({
   head: () => ({

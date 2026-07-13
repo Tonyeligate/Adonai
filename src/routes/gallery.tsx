@@ -3,21 +3,21 @@ import { useEffect, useMemo, useState } from "react";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
 import { X } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
-import graduation from "@/assets/graduation.jpg";
-import sports from "@/assets/sports.jpg";
-import excursion from "@/assets/excursion.jpg";
-import excursion2 from "@/assets/excursion-2.jpg";
-import excursion3 from "@/assets/excursion-3.jpg";
-import jhs from "@/assets/jhs.jpg";
-import cultural from "@/assets/cultural.jpg";
-import kindergarten from "@/assets/kindergarten.jpg";
-import library from "@/assets/library.jpg";
-import ict from "@/assets/ict-lab.svg";
-import campus from "@/assets/campus.jpg";
-import campus2 from "@/assets/campus-2.jpg";
-import campus3 from "@/assets/campus-3.jpg";
-import creche from "@/assets/creche.jpg";
-import primary from "@/assets/primary.jpg";
+import graduation from "@/assets/GRADUATION.jpeg";
+import sports from "@/assets/SPORTS.jpeg";
+import excursion from "@/assets/EXCURSION1.jpeg";
+import excursion2 from "@/assets/EXCURSION2.jpeg";
+import excursion3 from "@/assets/EXCURSION3.jpeg";
+import jhs from "@/assets/Jhs.jpeg";
+import cultural from "@/assets/Cultural.jpeg";
+import kindergarten from "@/assets/KG.jpeg";
+import library from "@/assets/LIBRARY.jpeg";
+import ict from "@/assets/academic-coordinator.jpg";
+import campus from "@/assets/Campus1.jpeg";
+import campus2 from "@/assets/campus2.jpeg";
+import campus3 from "@/assets/campus3.jpeg";
+import creche from "@/assets/Creche.jpeg";
+import primary from "@/assets/Primary.jpeg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
