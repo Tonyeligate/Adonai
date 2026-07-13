@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
 import { BookOpen, Cpu, FlaskConical, Calculator, Languages, Trophy } from "lucide-react";
-import creche from "@/assets/creche.jpg";
-import kindergarten from "@/assets/kindergarten.jpg";
-import ict from "@/assets/ict-lab.svg";
-import jhs from "@/assets/jhs.jpg";
+import creche from "@/assets/Creche.jpeg";
+import kindergarten from "@/assets/KG.jpeg";
+import primary from "@/assets/Primary.jpeg";
+import jhs from "@/assets/Jhs.jpeg";
 
 export const Route = createFileRoute("/academics")({
   head: () => ({
@@ -32,7 +32,7 @@ const overview = [
 const departments = [
   { t: "Creche & Nursery", o: "Safe, loving care with playful early-learning experiences.", a: "Play-based, sensory and social learning.", s: ["Language play", "Numbers & shapes", "Music & movement", "Creative arts"], img: creche },
   { t: "Kindergarten", o: "Phonics, early numeracy, social skills and moral foundations.", a: "Theme-based learning with hands-on activities.", s: ["English language", "Numeracy", "Our World Our People", "Creative arts"], img: kindergarten },
-  { t: "Primary School", o: "Strong literacy, numeracy and ICT foundations.", a: "Inquiry-led classrooms with regular assessment.", s: ["English", "Mathematics", "Science", "ICT", "Religious & Moral Ed.", "Ghanaian Language", "French"], img: ict },
+  { t: "Primary School", o: "Strong literacy, numeracy and ICT foundations.", a: "Inquiry-led classrooms with regular assessment.", s: ["English", "Mathematics", "Science", "ICT", "Religious & Moral Ed.", "Ghanaian Language", "French"], img: primary },
   { t: "Junior High School", o: "BECE preparation, STEM focus and leadership development.", a: "Subject specialists with structured revision and mentorship.", s: ["English", "Mathematics", "Integrated Science", "Social Studies", "ICT", "Career Tech", "RME", "French", "Ghanaian Language"], img: jhs },
 ];
 
@@ -65,7 +65,7 @@ function Academics() {
         <div className="container-x space-y-12">
           {departments.map((d, i) => (
             <article key={d.t} className={`grid gap-8 lg:grid-cols-2 lg:items-center ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}>
-              <img src={d.img} alt={`${d.t} at Adonai`} className="aspect-[4/3] w-full rounded-3xl object-cover shadow-[var(--shadow-soft)]" loading="lazy" width={1200} height={800} />
+              <img src={d.img} alt={`${d.t} at Adonai`} className="aspect-[4/3] w-full rounded-3xl object-cover object-top shadow-[var(--shadow-soft)]" loading="lazy" width={1200} height={800} />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">Department</p>
                 <h2 className="mt-2 font-display text-3xl font-bold md:text-4xl">{d.t}</h2>

@@ -45,20 +45,50 @@ function Admissions() {
     const form = e.currentTarget;
     const fd = new FormData(form);
     const data = Object.fromEntries(fd) as Record<string, string>;
+    const childName = [data.childSurname, data.childFirstName, data.childOtherName].filter(Boolean).join(" ").trim();
+    const applicationNotes = [
+      `Date of Birth: ${data.dateOfBirth || "-"}`,
+      `Religion: ${data.religion || "-"}`,
+      `Tribe: ${data.tribe || "-"}`,
+      `Previous School: ${data.previousSchool || "-"}`,
+      `Mother's Name: ${data.motherName || "-"}`,
+      `Mother's Language: ${data.motherLanguage || "-"}`,
+      `Mother's Occupation: ${data.motherOccupation || "-"}`,
+      `Mother's Phone: ${data.motherPhone || "-"}`,
+      `Father's Name: ${data.fatherName || "-"}`,
+      `Father's Language: ${data.fatherLanguage || "-"}`,
+      `Father's Occupation: ${data.fatherOccupation || "-"}`,
+      `Father's Phone: ${data.fatherPhone || "-"}`,
+      `Location: ${data.location || "-"}`,
+      `House Number: ${data.houseNumber || "-"}`,
+      `Other Useful Information: ${data.notes || "-"}`,
+    ].join("\n");
     setSubmitting(true);
     try {
       const { error } = await supabase.from("applications").insert({
         parent_name: data.parent,
-        child_name: data.child,
+        child_name: childName,
         class_applying_for: data.class,
         phone: data.phone,
         email: data.email,
-        notes: data.notes || null,
+        notes: applicationNotes,
       });
       if (error) throw error;
       toast.success("Application received! We'll contact you within 24 hours.");
-      const body = `Hello Adonai International School,%0A%0AI'd like to apply for admission.%0A%0AParent: ${data.parent}%0AChild: ${data.child}%0AClass: ${data.class}%0APhone: ${data.phone}%0AEmail: ${data.email}%0ANotes: ${data.notes || "-"}`;
-      window.location.href = `mailto:info@adonaischool.edu.gh?subject=Admission Inquiry — ${encodeURIComponent(data.child || "")}&body=${body}`;
+      const body = [
+        "Hello Adonai International School,",
+        "",
+        "I'd like to apply for admission.",
+        "",
+        `Parent / Guardian: ${data.parent || "-"}`,
+        `Child: ${childName || "-"}`,
+        `Class: ${data.class || "-"}`,
+        `Phone: ${data.phone || "-"}`,
+        `Email: ${data.email || "-"}`,
+        "",
+        applicationNotes,
+      ].join("\n");
+      window.location.href = `mailto:info@adonaischool.edu.gh?subject=Admission Inquiry — ${encodeURIComponent(childName || "")}&body=${encodeURIComponent(body)}`;
       setSent(true);
       form.reset();
     } catch (err) {
@@ -116,17 +146,31 @@ function Admissions() {
 
           <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-card p-7 shadow-[var(--shadow-soft)] md:p-10">
             <h3 className="font-display text-2xl font-bold">Online application</h3>
-            <p className="mt-1 text-sm text-muted-foreground">We'll get back within 24 hours.</p>
+            <p className="mt-1 text-sm text-muted-foreground">Please complete the form in block letters. We'll get back within 24 hours.</p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <Field label="Parent / Guardian" name="parent" required />
-              <Field label="Child's full name" name="child" required />
+              <Field label="Child surname" name="childSurname" required />
+              <Field label="Child first name" name="childFirstName" required />
+              <Field label="Child other name" name="childOtherName" />
+              <Field label="Date of birth" name="dateOfBirth" type="date" required />
+              <Field label="Religion" name="religion" required />
+              <Field label="Tribe" name="tribe" required />
               <Field label="Class applying for" name="class" placeholder="e.g. KG 2 / Primary 4 / JHS 1" required />
               <Field label="Phone number" name="phone" type="tel" required />
+              <Field label="Email" name="email" type="email" required />
+              <Field label="Mother's name" name="motherName" required />
+              <Field label="Mother's language" name="motherLanguage" required />
+              <Field label="Mother's occupation" name="motherOccupation" required />
+              <Field label="Mother's phone number" name="motherPhone" type="tel" required />
+              <Field label="Father's name" name="fatherName" required />
+              <Field label="Father's language" name="fatherLanguage" required />
+              <Field label="Father's occupation" name="fatherOccupation" required />
+              <Field label="Father's phone number" name="fatherPhone" type="tel" required />
+              <Field label="Location" name="location" required />
+              <Field label="House number" name="houseNumber" required />
+              <Field label="Previous school" name="previousSchool" />
               <div className="sm:col-span-2">
-                <Field label="Email" name="email" type="email" required />
-              </div>
-              <div className="sm:col-span-2">
-                <label className="text-sm font-medium">Additional notes
+                <label className="text-sm font-medium">Any other useful information (illness, allergies, habits etc.)
                   <textarea name="notes" rows={4} className="mt-1.5 block w-full rounded-xl border border-input bg-background px-3 py-2.5 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/20" />
                 </label>
               </div>

@@ -1,9 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
-import campus from "@/assets/campus.jpg";
-import campusTwo from "@/assets/campus-2.jpg";
-import campusThree from "@/assets/campus-3.jpg";
-import graduation from "@/assets/graduation.jpg";
 import proprietorImg from "@/images/proprietor.jpg";
 import headmasterImg from "@/images/headmaster.jpg";
 import academicCoordinatorImg from "@/images/academic-coordinator.jpg";
@@ -75,7 +71,7 @@ function About() {
 
       <section className="section-pad">
         <div className="container-x grid items-center gap-12 lg:grid-cols-2">
-          <img src={campus} alt="Adonai International School campus" className="rounded-3xl shadow-[var(--shadow-elegant)]" loading="lazy" width={1600} height={1067} />
+          <img src={proprietorImg} alt="The Proprietor of Adonai International School" className="rounded-3xl shadow-[var(--shadow-elegant)]" loading="lazy" width={1600} height={1067} />
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-primary">Our Story</p>
             <h2 className="mt-3 font-display text-3xl font-bold md:text-4xl">More than a decade of educating Ghana's future</h2>
@@ -131,7 +127,7 @@ function About() {
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {team.map((p) => (
               <div key={p.n} className="overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-                <img src={p.img} alt={p.alt} className="h-56 w-full object-cover" loading="lazy" width={1200} height={900} />
+                <img src={p.img} alt={p.alt} className="h-56 w-full object-cover object-top" loading="lazy" width={1200} height={900} />
                 <div className="p-6">
                   <h3 className="font-display text-xl font-semibold">{p.n}</h3>
                   <p className="text-sm font-medium text-gold">{p.r}</p>
