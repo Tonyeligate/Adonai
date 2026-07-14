@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout, PageHero } from "@/components/site/SiteLayout";
-import proprietorImg from "@/images/proprietor.jpg";
-import headmasterImg from "@/images/headmaster.jpg";
-import academicCoordinatorImg from "@/images/academic-coordinator.jpg";
-import secretaryImg from "@/images/secretary.jpg";
+import proprietorImg from "@/assets/proprietor.jpg";
+import headmasterImg from "@/assets/headmaster.jpg";
+import academicCoordinatorImg from "@/assets/academic-coordinator.jpg";
+import secretaryImg from "@/assets/secretary.jpg";
 import { Award, Compass, Heart, Lightbulb, Scale, Crown } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
