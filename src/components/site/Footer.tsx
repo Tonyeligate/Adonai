@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Phone, MapPin, Mail, Facebook, Instagram, Youtube } from "lucide-react";
-import logo from "@/assets/Adonai-logo.jpeg";
+import logo from "@/assets/adonai-logo.jpeg";
 
 export function Footer() {
   return (
